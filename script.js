@@ -43,7 +43,7 @@ function valueButton(event) {
 				screen.innerHTML = c;
 				console.log(c);
 				numAction = '';
-				c = a;
+				a = c;
 				b = '';
 			}
 			if (numAction === 'X') {
