@@ -6,9 +6,6 @@ let a = '';
 let b = '';
 let numAction = '';
 let c = '';
-/*const firstNumber = [
-	{ number: a }
-]*/
 
 const number = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
 const action = ['/', 'X', '-', '+',];
@@ -36,14 +33,12 @@ function valueButton(event) {
 				}
 			}
 		} else if (event.target.textContent === 'ac') {
-			console.log('Очистка');
 			a = '';
 			numAction = '';
 			b = '';
 			screen.innerHTML = '0';
 		} else if (action.includes(examination)) {
 			numAction = examination;
-			console.log(numAction);
 		} else if (event.target.textContent === '=') {
 			if (numAction === '/') {
 				c = +a / +b;
@@ -56,7 +51,6 @@ function valueButton(event) {
 			if (numAction === 'X') {
 				c = +a * +b;
 				screen.innerHTML = c;
-				console.log(c);
 				numAction = '';
 				a = c;
 				b = '';
@@ -64,7 +58,6 @@ function valueButton(event) {
 			if (numAction === '+') {
 				c = +a + +b;
 				screen.innerHTML = c;
-				console.log(c);
 				numAction = '';
 				a = c;
 				b = '';
@@ -73,7 +66,6 @@ function valueButton(event) {
 			if (numAction === '-') {
 				c = +a - +b;
 				screen.innerHTML = c;
-				console.log(c);
 				numAction = '';
 				a = c;
 				b = '';
@@ -101,12 +93,4 @@ function valueButton(event) {
 		}
 
 	}
-	console.log(`Это а= ${a}`);
-	console.log(`Это b= ${b}`);
 }
-
-
-/*
-let fir = 21313;
-let fir2 = fir[0] = - fir;
-console.log(fir2)*/
