@@ -245,6 +245,6 @@ body {
 
 @media (min-width: 414px) {
 	.calc__null {
-		padding: 0px 30px 50px 0px;
+		padding: 20px 30px 50px 0px;
 	}
 }
