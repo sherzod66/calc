@@ -155,7 +155,7 @@ body {
 	grid-column-start: 1;
 	grid-column-end: 3;
 	border-radius: 40px;
-	text-align: center;
+	text-align: left;
 	padding-left: 20px;
 }
 
