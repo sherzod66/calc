@@ -151,6 +151,8 @@ body {
 	grid-column-start: 1;
 	grid-column-end: 3;
 	border-radius: 40px;
+	text-align: center;
+	padding-left: 20px;
 }
 
 .calc__body__column.grey {
