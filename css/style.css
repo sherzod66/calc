@@ -145,6 +145,10 @@ body {
 	line-height: 58px;
 }
 
+.calc__body__column:active {
+	background-color: #525252;
+}
+
 .calc__body__column.bg {
 	grid-row-start: auto;
 	grid-row-end: auto;
