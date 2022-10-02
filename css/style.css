@@ -86,13 +86,14 @@ h6 {
 	font-size: inherit;
 	font-weight: 400;
 }
-
 /*========================*/
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap');
+
 
 body {
 	background-color: #333;
+	font-family: 'Fira Sans', sans-serif
 }
-
 .wrapper {
 	overflow: hidden;
 	min-height: 100vh;
