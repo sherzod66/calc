@@ -22,19 +22,19 @@ calcContent.addEventListener("click", valueButton);
 
 function valueButton(event) {
 	if (event.target.closest('.calc__body__column')) {
-		let examination = new Intl.NumberFormat().format(+event.target.textContent);
+		let examination = event.target.textContent;
 		if (number.includes(examination)) {
 			if (b == '' && numAction == '') {
 				if (a.length < 19) {
 					a += examination;
 					a2 += examination;
-					screen.innerHTML = a;
+					screen.innerHTML = `${new Intl.NumberFormat().format(+a)}`;
 				}
 			} else {
 				if (b.length < 16) {
 					b += examination;
 					b2 += examination;
-					screen.innerHTML = b;
+					screen.innerHTML = `${new Intl.NumberFormat().format(+b)}`;
 					console.log(`Это = ${b}`);
 				}
 			}
@@ -53,7 +53,7 @@ function valueButton(event) {
 		} else if (event.target.textContent === '=') {
 			if (numAction === '/') {
 				c = +a / +b;
-				screen.innerHTML = c;
+				screen.innerHTML = `${new Intl.NumberFormat().format(+c)}`;
 				console.log(c);
 				numAction = '';
 				a = c;
@@ -61,7 +61,7 @@ function valueButton(event) {
 			}
 			if (numAction === 'X') {
 				c = +a * +b;
-				screen.innerHTML = c;
+				screen.innerHTML = `${new Intl.NumberFormat().format(+c)}`;
 				console.log(c);
 				numAction = '';
 				a = c;
@@ -69,7 +69,7 @@ function valueButton(event) {
 			}
 			if (numAction === '+') {
 				c = +a + +b;
-				screen.innerHTML = c;
+				screen.innerHTML = `${new Intl.NumberFormat().format(+c)}`;
 				console.log(c);
 				numAction = '';
 				a = c;
@@ -78,7 +78,7 @@ function valueButton(event) {
 			}
 			if (numAction === '-') {
 				c = +a - +b;
-				screen.innerHTML = c;
+				screen.innerHTML = `${new Intl.NumberFormat().format(+c)}`;
 				console.log(c);
 				numAction = '';
 				a = c;
@@ -91,10 +91,10 @@ function valueButton(event) {
 					let minusL = a;
 					a = '-' + minusL;
 					console.log(`a2 = ${a2}`);
-					screen.innerHTML = a;
+					screen.innerHTML = `${new Intl.NumberFormat().format(+a)}`;
 				} else {
 					a = a2;
-					screen.innerHTML = a;
+					screen.innerHTML = `${new Intl.NumberFormat().format(+a)}`;
 				}
 
 			} else {
@@ -102,10 +102,10 @@ function valueButton(event) {
 					let minus = b
 					b = '-' + minus;
 					console.log(`xz = ${b2}`);
-					screen.innerHTML = b;
+					screen.innerHTML = `${new Intl.NumberFormat().format(+b)}`;
 				} else {
 					b = b2;
-					screen.innerHTML = b;
+					screen.innerHTML = `${new Intl.NumberFormat().format(+b)}`;
 				}
 
 			}
@@ -113,11 +113,11 @@ function valueButton(event) {
 			if (b == '' && numAction == '') {
 				let precent = a;
 				a = +precent / 100;
-				screen.innerHTML = a;
+				screen.innerHTML = `${new Intl.NumberFormat().format(+a)}`;
 			} else {
 				let precent = b;
 				b = +precent / 100;
-				screen.innerHTML = b;
+				screen.innerHTML = `${new Intl.NumberFormat().format(+b)}`;
 			}
 		}
 
