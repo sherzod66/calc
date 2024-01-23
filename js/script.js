@@ -22,7 +22,7 @@ calcContent.addEventListener("click", valueButton);
 
 function valueButton(event) {
 	if (event.target.closest('.calc__body__column')) {
-		let examination = event.target.textContent;
+		let examination = new Intl.NumberFormat().format(+event.target.textContent);
 		if (number.includes(examination)) {
 			if (b == '' && numAction == '') {
 				if (a.length < 19) {
